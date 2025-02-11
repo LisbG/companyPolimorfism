@@ -21,7 +21,7 @@ public class OutSourcedEmployee extends Employee {
 	}
 	
 	@Override
-	public double payment() {
-		return super.payment() + (additionalCharge * 1.1);
+	public double getPayment() {
+		return super.getPayment() + (additionalCharge * 1.1);
 	}
 }

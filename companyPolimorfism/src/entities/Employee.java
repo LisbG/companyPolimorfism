@@ -35,14 +35,20 @@ public class Employee {
 		return this.valuePerHour;
 	}
 	
-	public void setHours(Double valuePerHour) {
+	public void setValuePerHours(Double valuePerHour) {
 		this.valuePerHour = valuePerHour;
 	}
 	
 	// Methods
 	
-	public double payment() {
+	public double getPayment() {
 		return this.valuePerHour * this.hours;
 	}
 
+	@Override
+	public String toString() {
+		return "Name: " + this.getName()
+				+ "\nHours: " + this.getHours()
+				+ "\nValue per hours: " + this.getValuePerHour();
+	}
 }
