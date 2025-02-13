@@ -24,4 +24,10 @@ public class OutSourcedEmployee extends Employee {
 	public double getPayment() {
 		return super.getPayment() + (additionalCharge * 1.1);
 	}
+	
+	@Override
+	public String toString() {
+		return super.toString()
+				+ "\nAditional charge: " + this.additionalCharge;
+	}
 }

@@ -60,7 +60,7 @@ public class Application {
 
 								case 1:
 									String employeeName;
-									String outSourced;
+									char outSourced;
 									Integer employeeHours;
 									double employeValuePerHour;
 
@@ -74,18 +74,26 @@ public class Application {
 									employeValuePerHour = sc.nextDouble();
 
 									System.out.print("Outsourced Employee? (Y/N): ");
-									outSourced = sc.next();
+									outSourced = sc.next().charAt(0);
 
-									if (outSourced.equals("S")) {
+									switch (outSourced) {
+
+									case 'Y':
 										Double additionalCharge;
-										
+
 										System.out.print("Aditional charge: ");
 										additionalCharge = sc.nextDouble();
-										
-										comp.addOutsourcedEmployee(new OutSourcedEmployee(employeeName, employeeHours, employeValuePerHour, additionalCharge));
-									} else {
+
+										comp.addOutsourcedEmployee(new OutSourcedEmployee(employeeName, employeeHours,
+												employeValuePerHour, additionalCharge));
+										break;
+									case 'N':
 										comp.addEmployee(
 												new Employee(employeeName, employeeHours, employeValuePerHour));
+										break;
+									default:
+										System.out.println("Invalid option!");
+										break;
 									}
 
 									System.out.println("Employee added!\n\n");

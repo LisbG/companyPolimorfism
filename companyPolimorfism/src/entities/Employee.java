@@ -49,6 +49,7 @@ public class Employee {
 	public String toString() {
 		return "Name: " + this.getName()
 				+ "\nHours: " + this.getHours()
-				+ "\nValue per hours: " + this.getValuePerHour();
+				+ "\nValue per hours: " + this.getValuePerHour()
+				+ "\nPayment value: " + this.getPayment();
 	}
 }
